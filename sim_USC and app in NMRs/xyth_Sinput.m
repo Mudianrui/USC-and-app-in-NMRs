@@ -51,7 +51,7 @@ switch floor(flag)
                 xd = xe0-Le/2+xd;
                 yd = ye0+yd;
             end
-            wd = re*vd;
+            wd = vd/re;
         elseif xt>xe0+Le/2
             ep = re-sqrt((xt-(xe0+Le/2))^2+(yt-ye0)^2);
             th = atan2(yt-ye0,xt-(xe0+Le/2));
@@ -65,7 +65,7 @@ switch floor(flag)
                 xd = xe0+Le/2+xd;
                 yd = ye0+yd;
             end
-            wd = re*vd;
+            wd = vd/re;
         else
             if yt>ye0
                 ep = (ye0+re)-yt;
@@ -99,7 +99,7 @@ switch floor(flag)
                 xd = xe0+xd;
                 yd = ye0-Le/2+yd;
             end
-            wd = re*vd;
+            wd = vd/re;
         elseif yt>ye0+Le/2
             ep = re-sqrt((xt-xe0)^2+(yt-(ye0+Le/2))^2);
             th = atan2(yt-(ye0+Le/2),xt-xe0);
@@ -113,7 +113,7 @@ switch floor(flag)
                 xd = xe0+xd;
                 yd = ye0+Le/2+yd;
             end
-            wd = re*vd;
+            wd = vd/re;
         else
             if xt>xe0
                 ep = (xe0+re)-xt;
